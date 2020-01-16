@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
   inflationRate = (inflationRate / 100) + 1; //changes the inflation percentage to the inflation rate (add 1 to account for existing cost)
 
-  for(int i = 1; i <= numYears; i++) //run until all years have been inflated
+  for(int i = 1; i <= numYears; ++i) //run until all years have been inflated
   {
     itemCost = itemCost * (inflationRate); //update the item cost to account for inflation
   }
