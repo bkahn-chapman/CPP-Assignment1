@@ -4,7 +4,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
   unsigned int maxCapacity; //maximum capacity is an integer because it is counted in whole numbers of people (never negative)
-  unisnged int numPeople; //number of people is an integer because it is impossible to have anything other than 1 whole person at a time (never negative)
+  unsigned int numPeople; //number of people is an integer because it is impossible to have anything other than 1 whole person at a time (never negative)
 
   cout << "What is the maximum capacity of the room?" << endl;
   cin >> maxCapacity; //gets the user's input for maximum room capacity
@@ -14,7 +14,14 @@ int main(int argc, char **argv)
   if(numPeople <= maxCapacity) //less people than the maximum capacity or the exact number of people
   {
     cout << "It is legal to hold the meeting in this room." << endl;
-    cout << "There is room for " << (maxCapacity - numPeople) << " more people in this room." << endl; //calculates how many more people can be fit into the room
+    if(numPeople < maxCapacity)
+    {
+      cout << "There is room for " << (maxCapacity - numPeople) << " more people in this room." << endl; //calculates how many more people can be fit into the room
+    }
+    else
+    {
+      cout << "However there is no more room for any other people." << endl;
+    }
   }
   else //more people than the maximum capacity
   {
