@@ -3,8 +3,8 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-  int maxCapacity; //maximum capacity is an integer because it is counted in whole numbers of people
-  int numPeople; //number of people is an integer because it is impossible to have anything other than 1 whole person at a time
+  unsigned int maxCapacity; //maximum capacity is an integer because it is counted in whole numbers of people (never negative)
+  unisnged int numPeople; //number of people is an integer because it is impossible to have anything other than 1 whole person at a time (never negative)
 
   cout << "What is the maximum capacity of the room?" << endl;
   cin >> maxCapacity; //gets the user's input for maximum room capacity
