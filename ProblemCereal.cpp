@@ -16,11 +16,11 @@ int main(int argc, char **argv)
 
   numBoxes = (metricTon / cerealWeight) + 1; //determines the number of boxes it would take to make a metric ton (+1 because int always rounds down and that wouldn't make a true full metric ton)
 
-  if(cerealWeight < metricTon)
+  if(cerealWeight < metricTon) //if more than one box of cereal is needed to make at least one metric ton
   {
     cout << "You would need " << numBoxes << " cereal boxes to have at least one metric ton." << endl;
   }
-  else
+  else //if only one box of cereal is needed to make one metric ton
   {
     cout << "You would only need one cereal box to have at least one metric ton." << endl;
   }
